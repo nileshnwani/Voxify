@@ -1,0 +1,118 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #050505;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    /* Center-align the content */
+}
+
+.container {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    background-color: orangered;
+    border-radius: 10px;
+    box-shadow: 0 0 10px blueviolet;
+    transition: transform 0.3s ease-in-out;
+    color: white;
+    font-weight: bold;
+    ;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+input[type="file"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"],
+input[type="button"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff;
+    font-size: 22px;
+}
+
+p {
+    white-space: pre-wrap;
+    color: #555;
+    font-size: 16px;
+}
+
+select {
+    color: black;
+}
+
+option {
+    color: black;
+    font-weight: bold;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.styled-div {
+    font-size: 20px;
+    font-family: 'Times New Roman', serif;
+    text-align: justify;
+    /* Other properties like color, background, padding, etc., can be added as needed */
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: blueviolet;
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 5px;
+    }
+}

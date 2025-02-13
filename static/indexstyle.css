@@ -1,0 +1,109 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #050505;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff;
+    font-size: 32px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: orangered;
+    border-radius: 10px;
+    box-shadow: 0 0 10px blueviolet;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+.container {
+    color: white;
+    /* Set text color to white */
+    font-weight: bold;
+    /* Make text bold */
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    /* Set text color to white */
+    font-weight: bold;
+    /* Make text bold */
+}
+
+input[type="file"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"],
+input[type="button"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+p {
+    white-space: pre-wrap;
+    color: #555;
+    font-size: 16px;
+}
+
+/* Style for the select element */
+select {
+    color: black;
+    /* Set the text color to black */
+}
+
+/* Style for the placeholder text in options */
+option {
+    color: black;
+    /* Set the placeholder text color to black */
+    font-weight: bold;
+    /* Make placeholder text bold */
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: blueviolet;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

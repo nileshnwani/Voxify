@@ -1,0 +1,6 @@
+Flask
+moviepy
+speechrecognition
+deep-translator
+pydub
+imageio[ffmpeg]

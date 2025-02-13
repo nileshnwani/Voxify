@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='indexstyle.css') }}">
+    <title>Voxify- Recognizer and Translator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #050505;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+            font-size: 32px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: orangered;
+            border-radius: 10px;
+            box-shadow: 0 0 10px blueviolet;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        .container {
+            color: white;
+            /* Set text color to white */
+            font-weight: bold;
+            /* Make text bold */
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: white;
+            /* Set text color to white */
+            font-weight: bold;
+            /* Make text bold */
+        }
+
+        input[type="file"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"],
+        input[type="button"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        input[type="submit"]:hover,
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p {
+            white-space: pre-wrap;
+            color: #555;
+            font-size: 16px;
+        }
+
+        /* Style for the select element */
+        select {
+            color: black;
+            /* Set the text color to black */
+        }
+
+        /* Style for the placeholder text in options */
+        option {
+            color: black;
+            /* Set the placeholder text color to black */
+            font-weight: bold;
+            /* Make placeholder text bold */
+        }
+
+        footer {
+            text-align: center;
+            background-color: black;
+            color: blueviolet;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Video Recognizer and Translator</h1>
+
+    <div class="container">
+        <form method="POST" action="/" enctype="multipart/form-data">
+            <label for="file">Choose a Video File:</label>
+            <input type="file" name="video" accept="video/*" required><br><br>
+
+            <label for="source_language">Select Source Language:</label>
+            <select name="source_language" id="language">
+                <option style="font-weight: bold;" value="ar">Arabic</option>
+                <option style="font-weight: bold;" value="da">Danish</option>
+                <option style="font-weight: bold;" value="de">German</option>
+                <option style="font-weight: bold;" value="el">Greek</option>
+                <option style="font-weight: bold;" value="es">Spanish</option>
+                <option style="font-weight: bold;" value="fi">Finnish</option>
+                <option style="font-weight: bold;" value="fr">French</option>
+                <option style="font-weight: bold;" value="hi">Hindi</option>
+                <option style="font-weight: bold;" value="en">English</option>
+                <option style="font-weight: bold;" value="it">Italian</option>
+                <option style="font-weight: bold;" value="ja">Japanese</option>
+                <option style="font-weight: bold;" value="ko">Korean</option>
+                <option style="font-weight: bold;" value="mr">Marathi</option>
+                <option style="font-weight: bold;" value="pl">Polish</option>
+                <option style="font-weight: bold;" value="pt">Portuguese</option>
+                <option style="font-weight: bold;" value="ru">Russian</option>
+                <option style="font-weight: bold;" value="ta">Tamil</option>
+                <option style="font-weight: bold;" value="tr">Turkish</option>
+                <option style="font-weight: bold;" value="zh-cn">Chinese (Simplified)</option>
+                <option style="font-weight: bold;" value="zh-tw">Chinese (Traditional)</option>
+                <!-- Add more language options here -->
+            </select><br><br>
+
+            <label for="target_language">Select Target Language:</label>
+            <select name="target_language" id="language">
+                <option style="font-weight: bold;" value="ar">Arabic</option>
+                <option style="font-weight: bold;" value="da">Danish</option>
+                <option style="font-weight: bold;" value="de">German</option>
+                <option style="font-weight: bold;" value="el">Greek</option>
+                <option style="font-weight: bold;" value="es">Spanish</option>
+                <option style="font-weight: bold;" value="fi">Finnish</option>
+                <option style="font-weight: bold;" value="fr">French</option>
+                <option style="font-weight: bold;" value="hi">Hindi</option>
+                <option style="font-weight: bold;" value="en">English</option>
+                <option style="font-weight: bold;" value="it">Italian</option>
+                <option style="font-weight: bold;" value="ja">Japanese</option>
+                <option style="font-weight: bold;" value="ko">Korean</option>
+                <option style="font-weight: bold;" value="mr">Marathi</option>
+                <option style="font-weight: bold;" value="pl">Polish</option>
+                <option style="font-weight: bold;" value="pt">Portuguese</option>
+                <option style="font-weight: bold;" value="ru">Russian</option>
+                <option style="font-weight: bold;" value="ta">Tamil</option>
+                <option style="font-weight: bold;" value="tr">Turkish</option>
+                <option style="font-weight: bold;" value="zh-cn">Chinese (Simplified)</option>
+                <option style="font-weight: bold;" value="zh-tw">Chinese (Traditional)</option>
+                <!-- Add more language options here -->
+            </select><br><br>
+
+            <input type="submit" value="Translate" id="translateBtn" onclick="showLoader()">
+            <span id="loader" style="display:none;">⏳ Translating...</span>
+
+
+
+
+            <!-- Clear button to clear previous translations and empty the uploads folder -->
+            <input type="button" value="Clear" onclick="clearTranslations()">
+        </form>
+
+    </div>
+    <footer style="text-align: center; margin-top: 20px; color: blueviolet; font-size: 14px;">
+        <b>Developed by</b><br>
+        Nilesh Wani</b>
+    </footer>
+
+</body>
+
+</html>
