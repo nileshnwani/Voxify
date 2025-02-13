@@ -1,62 +1,67 @@
-# Video-to-Text Translation Application
+# Voxify - Recognizer and Translator
 
-This project is a **Flask-based web application** that extracts speech from videos, converts it to text, and translates it into a target language.
+Voxify is a Flask-based web application that extracts audio from videos, transcribes the speech into text, and translates it into a specified language.
 
 ## Features
-- Upload a video file
-- Extract audio and transcribe speech
-- Translate the transcription into the desired language
-- Download the transcribed and translated text files
-
-## Technologies Used
-- **Flask** (Backend Framework)
-- **MoviePy** (Video Processing)
-- **SpeechRecognition** (Google Speech API)
-- **Deep Translator** (Translation API)
-- **pydub** (Audio Processing)
-- **HTML, CSS, JavaScript** (Frontend)
+- Extracts audio from uploaded video files.
+- Splits long audio files into 2-minute segments.
+- Transcribes speech using Google Speech Recognition.
+- Translates transcriptions into the desired language using Deep Translator.
+- Provides downloadable text files for transcriptions and translations.
 
 ## Installation
 
-1. Clone this repository:
+1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/video-translation.git
-   cd video-translation
+   git clone <repository-url>
+   cd Voxify-Recognizer-Translator
    ```
 
-2. Install dependencies:
+2. Create a virtual environment (optional but recommended):
+   ```sh
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
+
+3. Install dependencies:
    ```sh
    pip install -r requirements.txt
    ```
 
-3. Run the Flask application:
+## Usage
+
+1. Run the Flask application:
    ```sh
    python app.py
    ```
 
-4. Open your browser and go to:
+2. Open a web browser and go to:
    ```
    http://127.0.0.1:5000/
    ```
 
-## Usage
-1. Upload a video file.
-2. Select the **source language** of the speech in the video.
-3. Select the **target language** for translation.
-4. Click on the **Translate** button (a loading animation will appear).
-5. View the **recognized text** and its **translation**.
-6. Download the text files if needed.
+3. Upload a video file, select the source and target language, and click "Translate".
 
-## Troubleshooting
-- If `MoviePy` is missing, install it manually:
-  ```sh
-  pip install moviepy
-  ```
-- Ensure **ffmpeg** is installed and added to the system path.
-- If audio is not being processed, try increasing the `segment_duration` in the code.
+4. View the transcription and translation results.
+
+## Requirements
+Ensure you have `ffmpeg` installed for audio processing. Install it using:
+```sh
+sudo apt install ffmpeg  # For Linux
+brew install ffmpeg      # For macOS
+choco install ffmpeg     # For Windows
+```
+
+## Dependencies
+- Flask
+- moviepy
+- speechrecognition
+- deep-translator
+- pydub
 
 ## License
-This project is open-source under the **MIT License**.
+This project is licensed under the MIT License.
+
 
 ## Author
 **Nilesh Wani**
